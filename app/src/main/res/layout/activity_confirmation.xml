@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ConfirmationActivity">
+
+    <TextView
+        android:id="@+id/lblTotal"
+        android:layout_width="85dp"
+        android:layout_height="28dp"
+        android:text="0"
+        android:textAlignment="textEnd"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.95"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lblDescripcionCurso"
+        app:layout_constraintVertical_bias="0.314" />
+
+    <TextView
+        android:id="@+id/lblSubtotal"
+        android:layout_width="85dp"
+        android:layout_height="28dp"
+        android:text="0"
+        android:textAlignment="textEnd"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.95"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lblDescripcionCurso"
+        app:layout_constraintVertical_bias="0.118" />
+
+    <TextView
+        android:id="@+id/lblImpuestos"
+        android:layout_width="85dp"
+        android:layout_height="28dp"
+        android:text="0"
+        android:textAlignment="textEnd"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.95"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lblDescripcionCurso"
+        app:layout_constraintVertical_bias="0.219" />
+
+    <TextView
+        android:id="@+id/lblDescripcionCurso2"
+        android:layout_width="110dp"
+        android:layout_height="32dp"
+        android:layout_marginTop="48dp"
+        android:text="SUBTOTAL"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.637"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lblDescripcionCurso"
+        app:layout_constraintVertical_bias="0.032" />
+
+    <TextView
+        android:id="@+id/lblDescripcionCurso5"
+        android:layout_width="115dp"
+        android:layout_height="29dp"
+        android:text="IMPUESTOS"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.648"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lblDescripcionCurso2"
+        app:layout_constraintVertical_bias="0.047" />
+
+    <TextView
+        android:id="@+id/lblDescripcionCurso6"
+        android:layout_width="115dp"
+        android:layout_height="29dp"
+        android:text="TOTAL"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.648"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lblDescripcionCurso5"
+        app:layout_constraintVertical_bias="0.061" />
+
+    <Button
+        android:id="@+id/btnEnviar"
+        android:layout_width="180dp"
+        android:layout_height="48dp"
+        android:text="PAGAR"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.754" />
+
+    <TextView
+        android:id="@+id/lblNombreCurso"
+        android:layout_width="352dp"
+        android:layout_height="56dp"
+        android:text="NOMBRE"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.071" />
+
+    <TextView
+        android:id="@+id/lblDescripcionCurso"
+        android:layout_width="352dp"
+        android:layout_height="52dp"
+        android:text="DESCRIPCION"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lblNombreCurso"
+        app:layout_constraintVertical_bias="0.015" />
+</androidx.constraintlayout.widget.ConstraintLayout>

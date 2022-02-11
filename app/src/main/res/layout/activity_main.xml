@@ -18,4 +18,18 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.435" />
+
+    <EditText
+        android:id="@+id/txtPhone"
+        android:layout_width="298dp"
+        android:layout_height="59dp"
+        android:ems="10"
+        android:inputType="phone"
+        app:layout_constraintBottom_toTopOf="@+id/btnAcceder"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.597" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

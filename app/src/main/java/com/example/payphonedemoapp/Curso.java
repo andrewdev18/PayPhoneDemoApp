@@ -5,16 +5,18 @@ public class Curso {
     String nombre;
     String descripcion;
     double precio;
+    double impuesto;
     String urlImagen;
 
     public Curso() {
     }
 
-    public Curso(int idCurso, String nombre, String descripcion, double precio, String urlImagen) {
+    public Curso(int idCurso, String nombre, String descripcion, double precio, double impuesto, String urlImagen) {
         this.idCurso = idCurso;
         this.nombre = nombre;
         this.descripcion = descripcion;
         this.precio = precio;
+        this.impuesto = impuesto;
         this.urlImagen = urlImagen;
     }
 
@@ -48,6 +50,14 @@ public class Curso {
 
     public void setPrecio(double precio) {
         this.precio = precio;
+    }
+
+    public double getImpuesto() {
+        return impuesto;
+    }
+
+    public void setImpuesto(double impuesto) {
+        this.impuesto = impuesto;
     }
 
     public String getUrlImagen() {
