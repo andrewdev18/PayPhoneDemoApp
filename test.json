@@ -1,14 +1,5 @@
 {
-  {
     "id": 1,
-    "nombre": "Andres"
-  },
-  {
-    "id": 2,
-    "nombre": "Dany"
-  },
-  {
-    "id": 3,
-    "nombre": "Liam"
-  },
+    "nombre": "Andres",
+    "data": "some info"
 }
