@@ -1,0 +1,44 @@
+{
+  "cursos": [
+      {
+        "id": 1,
+        "nombre": "Programación básica - JAVA",
+        "descripcion": "Introducción a la programación en el lenguaje JAVA",
+        "precio": 13.39,
+        "impuesto": 1.61,
+        "urlImagen": "empty"
+      },
+      {
+        "id": 2,
+        "nombre": "POO - C#",
+        "descripcion": "Programación Orientada a Objetos - C#",
+        "precio": 22.32,
+        "impuesto": 2.68,
+        "urlImagen": "empty"
+      },
+      {
+        "id": 3,
+        "nombre": "Estructuras de datos",
+        "descripcion": "Modelos y estructuras de datos en programación.",
+        "precio": 8.93,
+        "impuesto": 1.07,
+        "urlImagen": "empty"
+      },
+      {
+        "id": 4,
+        "nombre": "FrontEnd",
+        "descripcion": "Curso de HTML, CSS y JavaScript",
+        "precio": 26.79,
+        "impuesto": 3.21,
+        "urlImagen": "empty"
+      },
+      {
+        "id": 5,
+        "nombre": "Aplicaciones Móviles - Android",
+        "descripcion": "Programación orientada a objetos en móviles - Java",
+        "precio": 22.32,
+        "impuesto": 2.68,
+        "urlImagen": "empty"
+      }
+    ]
+}
