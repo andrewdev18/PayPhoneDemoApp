@@ -32,7 +32,7 @@ public class MainActivity extends AppCompatActivity {
     Button btnAcceder;
     EditText txtPhone;
 
-    boolean isActiveUser;
+    String userId;
 
     RequestQueue queue;
 
@@ -45,7 +45,7 @@ public class MainActivity extends AppCompatActivity {
         txtPhone = findViewById(R.id.txtPhone);
 
         queue = Volley.newRequestQueue(getApplicationContext());
-        isActiveUser = false;
+        userId = "#";
 
         btnAcceder.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -54,7 +54,7 @@ public class MainActivity extends AppCompatActivity {
                 /*if(ValidateNumber()){
                     AccessSistem();
                 }else{
-                    Toast.makeText(getApplicationContext(), "Usuario " + txtPhone.getText().toString() + " no encontrado", Toast.LENGTH_LONG).show();
+                    Toast.makeText(getApplicationContext(), "No existe el usuario", Toast.LENGTH_LONG).show();
                 }*/
             }
         });
@@ -67,12 +67,13 @@ public class MainActivity extends AppCompatActivity {
         }
 
         Intent intent = new Intent(MainActivity.this, MenuActivity.class);
-        intent.putExtra("phone", txtPhone.getText().toString());
+        intent.putExtra("phone", number);
         startActivity(intent);
     }
 
     private boolean ValidateNumber(){
         String number = txtPhone.getText().toString().trim();
+        userId = "#";
 
         if(number.equals("")){
             number = "9999999999";
@@ -87,10 +88,11 @@ public class MainActivity extends AppCompatActivity {
                 new Response.Listener<JSONObject>() {
                     @Override
                     public void onResponse(JSONObject response) {
-                        if(response.toString().contains("documentId")){
-                            System.out.println("Existe el usuario");
-                        }else{
-                            System.out.println("No existe el usuario");
+                        try {
+                            MainActivity.this.userId = response.getString("documentId");
+                            System.out.println("Usuario: " + response.getString("documentId"));
+                        } catch (JSONException e) {
+                            e.printStackTrace();
                         }
                     }//Fin Response Listener
                 }, new Response.ErrorListener() {
@@ -105,22 +107,10 @@ public class MainActivity extends AppCompatActivity {
                 headers.put(headerKey, headerValue);
                 return headers;
             }
-
-            @Override
-            protected Response<JSONObject> parseNetworkResponse(NetworkResponse response) {
-                if(response.statusCode == 200){
-                    isActiveUser = true;
-                }
-                return super.parseNetworkResponse(response);
-            }
         };
 
         queue.add(request);
 
-        if(isActiveUser) {
-            return true;
-        }else{
-            return false;
-        }
+        return !userId.equals("#");
     }
 }
